@@ -1,0 +1,23 @@
+{
+  "name": "@jiaozi/example-langchain-js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node --import tsx src/run.ts",
+    "demo:llm": "node --import tsx src/run.ts --llm"
+  },
+  "dependencies": {
+    "@jiaozi-protocol/sdk": "file:../../packages/gdid-sdk-js",
+    "@jiaozi-protocol/gdid-core": "file:../../packages/gdid-core"
+  },
+  "optionalDependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.3.0",
+    "langchain": "^0.3.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,31 @@
+# 社区自动化:永不失联 — 首次参与者即时得到回应与指路
+name: welcome
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: >
+            Thanks for opening your first issue here. A maintainer reads every
+            issue — you will get a substantive reply, not a bot brush-off.
+            If this is an implementation report, the conformance output is the
+            fastest way for us to help. If you built something that passes,
+            consider adding it to `implementations.json` via PR — CI judges it
+            automatically.
+          pr-message: >
+            Thanks for your first PR. If this adds an entry to
+            `implementations.json`, the conformance workflow is the referee:
+            green means listed. For spec changes, make sure the test vectors
+            are updated (see the PR checklist). A maintainer will review soon.

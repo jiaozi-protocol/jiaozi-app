@@ -1,0 +1,59 @@
+{
+  "name": "@jiaozi-protocol/gdid-core",
+  "version": "0.2.1",
+  "description": "Jiaozi Protocol core primitives — DID documents, Ed25519 keys, status.v1 signed revocation-freshness credentials, attest.v1, credit merkle anchors",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./status": {
+      "types": "./dist/status.d.ts",
+      "import": "./dist/status.js",
+      "default": "./dist/status.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaozi-protocol/jiaozi-app.git",
+    "directory": "packages/gdid-core"
+  },
+  "homepage": "https://www.jiaozi.io",
+  "keywords": [
+    "did",
+    "verifiable-credentials",
+    "ai-agent",
+    "identity",
+    "ed25519",
+    "revocation",
+    "jiaozi-protocol"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "node --import tsx --test src/index.test.ts src/did.test.ts src/keys-hd.test.ts src/credit.test.ts src/attest-delegation.test.ts",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

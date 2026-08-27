@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14",
+  "standards": [
+    {
+      "id": "w3c-did-core",
+      "name": "W3C DID Core",
+      "status": "supported",
+      "adapter": "w3c-did",
+      "specUrl": "https://www.w3.org/TR/did-core/",
+      "notes": "MVP/Phase1 primary DID Document subset"
+    },
+    {
+      "id": "did-key",
+      "name": "did:key Method",
+      "status": "supported",
+      "adapter": "did-key",
+      "specUrl": "https://w3c-ccg.github.io/did-key-spec/",
+      "notes": "Second adapter: derive did:key view from owner pubkey multibase"
+    }
+  ]
+}

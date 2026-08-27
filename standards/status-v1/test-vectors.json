@@ -1,0 +1,168 @@
+{
+  "schema": "jiaozi.status.v1",
+  "generated": "deterministic (fixed seed, fixed clock 2026-08-08T00:00:00Z)",
+  "signingKey": {
+    "note": "TEST KEY ONLY - seed is 32 bytes of 0x07",
+    "privateKeyPkcs8Base64": "MC4CAQAwBQYDK2VwBCIEIAcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcH",
+    "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+  },
+  "vectors": [
+    {
+      "name": "valid-active",
+      "description": "Well-formed active credential. MUST verify.",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000001",
+          "did": "did:web:www.jiaozi.io:agents:jp-2026-000001",
+          "status": "active",
+          "trustLevel": "software",
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io"
+        },
+        "signature": "Ft8IB9gEPt7b95pyi49QB6vwHpjjf5boXJNr7oA5K9abpzdqKq5OUzLbQGUi33EoZWR1NGIm3Wltf_21xNKJAA",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000001\",\"did\":\"did:web:www.jiaozi.io:agents:jp-2026-000001\",\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"active\",\"trustLevel\":\"software\"}",
+      "verifyAt": "2026-08-08T00:01:00.000Z",
+      "expect": {
+        "valid": true
+      }
+    },
+    {
+      "name": "valid-revoked-with-reason",
+      "description": "Revoked credential with reason. MUST verify (the assertion is valid; the cert is not).",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000002",
+          "did": null,
+          "status": "revoked",
+          "trustLevel": null,
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io",
+          "revocationReason": "key-compromise"
+        },
+        "signature": "lDT7xNuoqTT4W0Z_4Kg05aP9zr-Ou08YBMz_OcSnOgD-IPB6yFaiTaMBj4rEAWX4VcR7XCJIWyYzHezIW-H1AA",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000002\",\"did\":null,\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"revocationReason\":\"key-compromise\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"revoked\",\"trustLevel\":null}",
+      "verifyAt": "2026-08-08T00:01:00.000Z",
+      "expect": {
+        "valid": true
+      }
+    },
+    {
+      "name": "expired",
+      "description": "Valid signature but verified after expiresAt. MUST fail: expired.",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000003",
+          "did": null,
+          "status": "active",
+          "trustLevel": "software",
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io"
+        },
+        "signature": "g0y0I04PwTah9u9FvpKzYtA1OPp0XQgAMsxz1EC4Jxd6hxXB2UzpUaY1F44MY8B4Ow6oMloPKt52910LBoKNDA",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000003\",\"did\":null,\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"active\",\"trustLevel\":\"software\"}",
+      "verifyAt": "2026-08-08T00:06:00.000Z",
+      "expect": {
+        "valid": false,
+        "reason": "expired"
+      }
+    },
+    {
+      "name": "tampered-payload",
+      "description": "status flipped revoked->active after signing. MUST fail: bad_signature.",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000004",
+          "did": null,
+          "status": "active",
+          "trustLevel": null,
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io"
+        },
+        "signature": "GoZyfwJLT9nEl006pwXskWa659olWUYtkqarBZvVBHAJvjdzPzBnKG6GOl7sHSyfKzLDzidMHfuNBCsrZJtwAw",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000004\",\"did\":null,\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"active\",\"trustLevel\":null}",
+      "verifyAt": "2026-08-08T00:01:00.000Z",
+      "expect": {
+        "valid": false,
+        "reason": "bad_signature"
+      }
+    },
+    {
+      "name": "serial-regression",
+      "description": "Valid credential, but RP already accepted a higher serial. MUST fail: serial_regression (verify with minSerial = serial+1).",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000005",
+          "did": null,
+          "status": "active",
+          "trustLevel": "software",
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io"
+        },
+        "signature": "L3Qyrmri4ADkGxuws6OJlOJN7e-nylf_us4J4ImEP8PI0agEtwhErz8Yh-Vy5ZpO6p3eRD_9SnjGd2CkOWB1BA",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000005\",\"did\":null,\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"active\",\"trustLevel\":\"software\"}",
+      "verifyAt": "2026-08-08T00:01:00.000Z",
+      "verifyOptions": {
+        "minSerialDelta": 1
+      },
+      "expect": {
+        "valid": false,
+        "reason": "serial_regression"
+      }
+    },
+    {
+      "name": "untrusted-key",
+      "description": "Valid credential, but RP pins a different key. MUST fail: untrusted_key.",
+      "credential": {
+        "payload": {
+          "schema": "jiaozi.status.v1",
+          "certId": "JP-2026-000006",
+          "did": null,
+          "status": "active",
+          "trustLevel": "software",
+          "serial": 1786147200000,
+          "signedAt": "2026-08-08T00:00:00.000Z",
+          "expiresAt": "2026-08-08T00:05:00.000Z",
+          "issuer": "https://www.jiaozi.io"
+        },
+        "signature": "azfaKCC1JZxL8iISF9GklwM4YVBYTzt0qApyehtp4hB9gK20tFWgD2J9SlBwCKnSwDTIrEr137p_cnVEDYSVDg",
+        "publicKeyMultibase": "z6kpsY-KcUgq-9VB7Ey7F-ZVHdq6-vnuSQh7qaRRG0iw"
+      },
+      "canonicalPayload": "{\"certId\":\"JP-2026-000006\",\"did\":null,\"expiresAt\":\"2026-08-08T00:05:00.000Z\",\"issuer\":\"https://www.jiaozi.io\",\"schema\":\"jiaozi.status.v1\",\"serial\":1786147200000,\"signedAt\":\"2026-08-08T00:00:00.000Z\",\"status\":\"active\",\"trustLevel\":\"software\"}",
+      "verifyAt": "2026-08-08T00:01:00.000Z",
+      "verifyOptions": {
+        "trustedKeys": [
+          "zSOME-OTHER-KEY"
+        ]
+      },
+      "expect": {
+        "valid": false,
+        "reason": "untrusted_key"
+      }
+    }
+  ]
+}

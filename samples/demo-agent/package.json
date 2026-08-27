@@ -1,0 +1,11 @@
+{
+  "name": "demo-safe-agent",
+  "version": "0.1.0",
+  "description": "Sample Agent project for Jiaozi MVP 30-minute walkthrough (no secrets)",
+  "private": true,
+  "type": "module",
+  "jiaozi": {
+    "framework": "demo",
+    "modelId": "demo-model-v1"
+  }
+}

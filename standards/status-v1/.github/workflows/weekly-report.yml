@@ -1,0 +1,56 @@
+# 社区自动化:每周一自动发布项目周报 issue(活动、合规状态、名录健康)
+name: weekly-report
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: conformance snapshot
+        id: conf
+        run: |
+          set +e
+          OUT=$(node conformance.mjs https://www.jiaozi.io JP-2026-000016 2>&1)
+          RC=$?
+          echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          {
+            echo "summary<<EOF"
+            echo "$OUT" | tail -3
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - name: create weekly issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUMMARY: ${{ steps.conf.outputs.summary }}
+          CONF_RC: ${{ steps.conf.outputs.rc }}
+        run: |
+          WEEK=$(date -u +%G-W%V)
+          if [ "$CONF_RC" = "0" ]; then STATUS="PASSING"; else STATUS="FAILING — needs attention"; fi
+          STARS=$(gh api "repos/${GITHUB_REPOSITORY}" --jq .stargazers_count)
+          OPEN=$(gh api "repos/${GITHUB_REPOSITORY}" --jq .open_issues_count)
+          IMPLS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('implementations.json','utf8')).implementations.length)")
+          {
+            echo "**Reference deployment conformance:** ${STATUS}"
+            echo ""
+            echo '```'
+            echo "${SUMMARY}"
+            echo '```'
+            echo ""
+            echo "**Registry:** ${IMPLS} verified implementation(s)"
+            echo "**Stars:** ${STARS} · **Open issues/PRs:** ${OPEN}"
+            echo ""
+            echo "_Auto-generated every Monday. If conformance is failing, that is the week's top priority._"
+          } > body.md
+          gh label create report --description "Automated weekly report" --color 0E8A16 2>/dev/null || true
+          gh issue create --title "Weekly report ${WEEK}" --label report --body-file body.md

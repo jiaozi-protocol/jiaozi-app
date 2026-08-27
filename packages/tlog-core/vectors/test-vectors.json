@@ -1,0 +1,658 @@
+{
+  "schema": "jiaozi.tlog.v1",
+  "design": "standards/tlog-v1/DESIGN.md (v1.0-design.1, public review until 2026-08-18)",
+  "generated": "deterministic (fixed seed, fixed clock 2026-08-08T00:00:00Z)",
+  "signingKey": {
+    "note": "TEST KEY ONLY - seed is 32 bytes of 0x2a",
+    "privateKeyPkcs8Base64": "MC4CAQAwBQYDK2VwBCIEICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq",
+    "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+  },
+  "logId": "https://www.jiaozi.io/api/tlog",
+  "entries": [
+    {
+      "leafIndex": 0,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_issued",
+        "certId": "JIAOZI-2026-000001",
+        "timestamp": "2026-08-08T00:00:00.000Z",
+        "contentHash": "sha256:386b265769c6d587a7552672bf8b626de92994fca42d52b19e94db023f4be0bb"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000001\",\"contentHash\":\"sha256:386b265769c6d587a7552672bf8b626de92994fca42d52b19e94db023f4be0bb\",\"eventType\":\"cert_issued\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:00.000Z\"}",
+      "leafHash": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b"
+    },
+    {
+      "leafIndex": 1,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_issued",
+        "certId": "JIAOZI-2026-000002",
+        "timestamp": "2026-08-08T00:00:01.000Z",
+        "contentHash": "sha256:4004c912b51fe9fdcdd75e13d8327c43257f51b3f91c1c3d0675e0457cfca23b"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000002\",\"contentHash\":\"sha256:4004c912b51fe9fdcdd75e13d8327c43257f51b3f91c1c3d0675e0457cfca23b\",\"eventType\":\"cert_issued\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:01.000Z\"}",
+      "leafHash": "sha256:62e94f014a1fab6ea01366c860c83fd29994f0f5f0e229c451e6923d4a4c9df7"
+    },
+    {
+      "leafIndex": 2,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_suspended",
+        "certId": "JIAOZI-2026-000001",
+        "timestamp": "2026-08-08T00:00:02.000Z",
+        "contentHash": "sha256:634698536573f1e67f97277ac4f017d1fd02e86f2618bb8a19794aaa761ad19c"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000001\",\"contentHash\":\"sha256:634698536573f1e67f97277ac4f017d1fd02e86f2618bb8a19794aaa761ad19c\",\"eventType\":\"cert_suspended\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:02.000Z\"}",
+      "leafHash": "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef"
+    },
+    {
+      "leafIndex": 3,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_reinstated",
+        "certId": "JIAOZI-2026-000001",
+        "timestamp": "2026-08-08T00:00:03.000Z",
+        "contentHash": "sha256:1e80883285c1bd036c907a2150a0f7d2ab498968dc082986479666fcddd7f74d"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000001\",\"contentHash\":\"sha256:1e80883285c1bd036c907a2150a0f7d2ab498968dc082986479666fcddd7f74d\",\"eventType\":\"cert_reinstated\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:03.000Z\"}",
+      "leafHash": "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c"
+    },
+    {
+      "leafIndex": 4,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_issued",
+        "certId": "JP-2026-000003",
+        "timestamp": "2026-08-08T00:00:04.000Z",
+        "contentHash": "sha256:f43d1344e9b146d4bba6d1a93eb304aa1da59944e5e8bc25a7039cee4b1b930b"
+      },
+      "canonicalEntry": "{\"certId\":\"JP-2026-000003\",\"contentHash\":\"sha256:f43d1344e9b146d4bba6d1a93eb304aa1da59944e5e8bc25a7039cee4b1b930b\",\"eventType\":\"cert_issued\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:04.000Z\"}",
+      "leafHash": "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877"
+    },
+    {
+      "leafIndex": 5,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_revoked",
+        "certId": "JIAOZI-2026-000002",
+        "timestamp": "2026-08-08T00:00:05.000Z",
+        "contentHash": "sha256:5c1efbead7d154fe1a9289ae1f068b41f440737d8311e530ecfe85c42fc31130"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000002\",\"contentHash\":\"sha256:5c1efbead7d154fe1a9289ae1f068b41f440737d8311e530ecfe85c42fc31130\",\"eventType\":\"cert_revoked\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:05.000Z\"}",
+      "leafHash": "sha256:b0439c30988ea5193a76f4ff1b5b6daf3955003d78e1113384dea00fd4605b6d"
+    },
+    {
+      "leafIndex": 6,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_issued",
+        "certId": "JP-2026-000004",
+        "timestamp": "2026-08-08T00:00:06.000Z",
+        "contentHash": "sha256:c1307265be29c9919b3fec36a2f39e28f09dc2a9381cccc6d7681f9968d24ade"
+      },
+      "canonicalEntry": "{\"certId\":\"JP-2026-000004\",\"contentHash\":\"sha256:c1307265be29c9919b3fec36a2f39e28f09dc2a9381cccc6d7681f9968d24ade\",\"eventType\":\"cert_issued\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:06.000Z\"}",
+      "leafHash": "sha256:a4de7c9275f1eb98169c061b3a6cd07af34e5cc10d2e95da51fa3e5e4b18b9d4"
+    },
+    {
+      "leafIndex": 7,
+      "entry": {
+        "schema": "jiaozi.tlog.v1",
+        "eventType": "cert_revoked",
+        "certId": "JIAOZI-2026-000001",
+        "timestamp": "2026-08-08T00:00:07.000Z",
+        "contentHash": "sha256:63cead8cec155e4ce3050be3fb3fd1632a69965264d9ec4f9d522a6a94fbe717"
+      },
+      "canonicalEntry": "{\"certId\":\"JIAOZI-2026-000001\",\"contentHash\":\"sha256:63cead8cec155e4ce3050be3fb3fd1632a69965264d9ec4f9d522a6a94fbe717\",\"eventType\":\"cert_revoked\",\"schema\":\"jiaozi.tlog.v1\",\"timestamp\":\"2026-08-08T00:00:07.000Z\"}",
+      "leafHash": "sha256:e2e2f7a4cf106e8c05342cc2b8e4c8f335d3028e6c5fcea7752002fc4df5a522"
+    }
+  ],
+  "treeHeads": [
+    {
+      "treeSize": 0,
+      "rootHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "treeSize": 1,
+      "rootHash": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b"
+    },
+    {
+      "treeSize": 2,
+      "rootHash": "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1"
+    },
+    {
+      "treeSize": 3,
+      "rootHash": "sha256:904c1b3d20221f230b5893fad804e01699d1a8e1e332608a0a4cc8634002088a"
+    },
+    {
+      "treeSize": 4,
+      "rootHash": "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+    },
+    {
+      "treeSize": 5,
+      "rootHash": "sha256:460550d5c85f07de0de4fc8085b329ca6cdd929a86829ef8f839bb263c266c20"
+    },
+    {
+      "treeSize": 6,
+      "rootHash": "sha256:10e191950153bcb40e84a0c7956f7bee5f4786a6de25070c45aa11dffa47935c"
+    },
+    {
+      "treeSize": 7,
+      "rootHash": "sha256:6140561f138ada6c5f6b17f45c241d62db61ba801263381dafaeb6bbf70628d2"
+    },
+    {
+      "treeSize": 8,
+      "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+    }
+  ],
+  "sth": {
+    "payload": {
+      "schema": "jiaozi.tlog-sth.v1",
+      "logId": "https://www.jiaozi.io/api/tlog",
+      "treeSize": 8,
+      "timestamp": "2026-08-08T00:01:00.000Z",
+      "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+    },
+    "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+    "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+  },
+  "vectors": {
+    "inclusion": [
+      {
+        "name": "inclusion-leaf0-size8",
+        "description": "Leaf 0 under the size-8 tree head. MUST verify.",
+        "leafIndex": 0,
+        "treeSize": 8,
+        "leafHash": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+        "auditPath": [
+          "sha256:62e94f014a1fab6ea01366c860c83fd29994f0f5f0e229c451e6923d4a4c9df7",
+          "sha256:0b0dea20d6af22bf41d5df8f6d8e494fd4e098ae00561b5d20157c72c68bb659",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf1-size8",
+        "description": "Leaf 1 under the size-8 tree head. MUST verify.",
+        "leafIndex": 1,
+        "treeSize": 8,
+        "leafHash": "sha256:62e94f014a1fab6ea01366c860c83fd29994f0f5f0e229c451e6923d4a4c9df7",
+        "auditPath": [
+          "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+          "sha256:0b0dea20d6af22bf41d5df8f6d8e494fd4e098ae00561b5d20157c72c68bb659",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf2-size8",
+        "description": "Leaf 2 under the size-8 tree head. MUST verify.",
+        "leafIndex": 2,
+        "treeSize": 8,
+        "leafHash": "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+        "auditPath": [
+          "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf3-size8",
+        "description": "Leaf 3 under the size-8 tree head. MUST verify.",
+        "leafIndex": 3,
+        "treeSize": 8,
+        "leafHash": "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+        "auditPath": [
+          "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf4-size8",
+        "description": "Leaf 4 under the size-8 tree head. MUST verify.",
+        "leafIndex": 4,
+        "treeSize": 8,
+        "leafHash": "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877",
+        "auditPath": [
+          "sha256:b0439c30988ea5193a76f4ff1b5b6daf3955003d78e1113384dea00fd4605b6d",
+          "sha256:26b44ef6e3366b294d0fc6e6c46d8b28772fdf7b4fab7d8c629b925f3e43f3cb",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf5-size8",
+        "description": "Leaf 5 under the size-8 tree head. MUST verify.",
+        "leafIndex": 5,
+        "treeSize": 8,
+        "leafHash": "sha256:b0439c30988ea5193a76f4ff1b5b6daf3955003d78e1113384dea00fd4605b6d",
+        "auditPath": [
+          "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877",
+          "sha256:26b44ef6e3366b294d0fc6e6c46d8b28772fdf7b4fab7d8c629b925f3e43f3cb",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf6-size8",
+        "description": "Leaf 6 under the size-8 tree head. MUST verify.",
+        "leafIndex": 6,
+        "treeSize": 8,
+        "leafHash": "sha256:a4de7c9275f1eb98169c061b3a6cd07af34e5cc10d2e95da51fa3e5e4b18b9d4",
+        "auditPath": [
+          "sha256:e2e2f7a4cf106e8c05342cc2b8e4c8f335d3028e6c5fcea7752002fc4df5a522",
+          "sha256:4ccf6b09a9874b3858c14579a1ab487da8686da46a821eb31a5ade1c4e96a5c1",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf7-size8",
+        "description": "Leaf 7 under the size-8 tree head. MUST verify.",
+        "leafIndex": 7,
+        "treeSize": 8,
+        "leafHash": "sha256:e2e2f7a4cf106e8c05342cc2b8e4c8f335d3028e6c5fcea7752002fc4df5a522",
+        "auditPath": [
+          "sha256:a4de7c9275f1eb98169c061b3a6cd07af34e5cc10d2e95da51fa3e5e4b18b9d4",
+          "sha256:4ccf6b09a9874b3858c14579a1ab487da8686da46a821eb31a5ade1c4e96a5c1",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf0-size1",
+        "description": "Leaf 0 under the intermediate size-1 tree head. MUST verify.",
+        "leafIndex": 0,
+        "treeSize": 1,
+        "leafHash": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+        "auditPath": [],
+        "rootHash": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf2-size5",
+        "description": "Leaf 2 under the intermediate size-5 tree head. MUST verify.",
+        "leafIndex": 2,
+        "treeSize": 5,
+        "leafHash": "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+        "auditPath": [
+          "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877"
+        ],
+        "rootHash": "sha256:460550d5c85f07de0de4fc8085b329ca6cdd929a86829ef8f839bb263c266c20",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-leaf4-size6",
+        "description": "Leaf 4 under the intermediate size-6 tree head. MUST verify.",
+        "leafIndex": 4,
+        "treeSize": 6,
+        "leafHash": "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877",
+        "auditPath": [
+          "sha256:b0439c30988ea5193a76f4ff1b5b6daf3955003d78e1113384dea00fd4605b6d",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "rootHash": "sha256:10e191950153bcb40e84a0c7956f7bee5f4786a6de25070c45aa11dffa47935c",
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "inclusion-tampered-path",
+        "description": "First audit-path node corrupted. MUST fail.",
+        "leafIndex": 3,
+        "treeSize": 8,
+        "leafHash": "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+        "auditPath": [
+          "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": false
+        }
+      },
+      {
+        "name": "inclusion-wrong-index",
+        "description": "Audit path of leaf 3 presented for leaf 4. MUST fail.",
+        "leafIndex": 4,
+        "treeSize": 8,
+        "leafHash": "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+        "auditPath": [
+          "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "expect": {
+          "valid": false
+        }
+      },
+      {
+        "name": "inclusion-wrong-root",
+        "description": "Proof checked against the size-7 root instead of size-8. MUST fail.",
+        "leafIndex": 3,
+        "treeSize": 8,
+        "leafHash": "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+        "auditPath": [
+          "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "rootHash": "sha256:6140561f138ada6c5f6b17f45c241d62db61ba801263381dafaeb6bbf70628d2",
+        "expect": {
+          "valid": false
+        }
+      }
+    ],
+    "consistency": [
+      {
+        "name": "consistency-1-2",
+        "description": "Size-1 tree is a prefix of the size-2 tree. MUST verify.",
+        "first": 1,
+        "second": 2,
+        "firstRoot": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+        "secondRoot": "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+        "consistencyPath": [
+          "sha256:62e94f014a1fab6ea01366c860c83fd29994f0f5f0e229c451e6923d4a4c9df7"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-1-8",
+        "description": "Size-1 tree is a prefix of the size-8 tree. MUST verify.",
+        "first": 1,
+        "second": 8,
+        "firstRoot": "sha256:8fe7ea1413227e00bb26f9e6a849eb8474b9ce704d706a587f941f0c0bee353b",
+        "secondRoot": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "consistencyPath": [
+          "sha256:62e94f014a1fab6ea01366c860c83fd29994f0f5f0e229c451e6923d4a4c9df7",
+          "sha256:0b0dea20d6af22bf41d5df8f6d8e494fd4e098ae00561b5d20157c72c68bb659",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-2-5",
+        "description": "Size-2 tree is a prefix of the size-5 tree. MUST verify.",
+        "first": 2,
+        "second": 5,
+        "firstRoot": "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+        "secondRoot": "sha256:460550d5c85f07de0de4fc8085b329ca6cdd929a86829ef8f839bb263c266c20",
+        "consistencyPath": [
+          "sha256:0b0dea20d6af22bf41d5df8f6d8e494fd4e098ae00561b5d20157c72c68bb659",
+          "sha256:1539b015756ca0350b9c7b2635458fc528c045e698cb2d87e8b2f5d9292f6877"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-3-7",
+        "description": "Size-3 tree is a prefix of the size-7 tree. MUST verify.",
+        "first": 3,
+        "second": 7,
+        "firstRoot": "sha256:904c1b3d20221f230b5893fad804e01699d1a8e1e332608a0a4cc8634002088a",
+        "secondRoot": "sha256:6140561f138ada6c5f6b17f45c241d62db61ba801263381dafaeb6bbf70628d2",
+        "consistencyPath": [
+          "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+          "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:f19098bcb7bc9de408011c137422243b6407a48d99579994e31e998c988ce049"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-4-8",
+        "description": "Size-4 tree is a prefix of the size-8 tree. MUST verify.",
+        "first": 4,
+        "second": 8,
+        "firstRoot": "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33",
+        "secondRoot": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "consistencyPath": [
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-6-7",
+        "description": "Size-6 tree is a prefix of the size-7 tree. MUST verify.",
+        "first": 6,
+        "second": 7,
+        "firstRoot": "sha256:10e191950153bcb40e84a0c7956f7bee5f4786a6de25070c45aa11dffa47935c",
+        "secondRoot": "sha256:6140561f138ada6c5f6b17f45c241d62db61ba801263381dafaeb6bbf70628d2",
+        "consistencyPath": [
+          "sha256:4ccf6b09a9874b3858c14579a1ab487da8686da46a821eb31a5ade1c4e96a5c1",
+          "sha256:a4de7c9275f1eb98169c061b3a6cd07af34e5cc10d2e95da51fa3e5e4b18b9d4",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-7-8",
+        "description": "Size-7 tree is a prefix of the size-8 tree. MUST verify.",
+        "first": 7,
+        "second": 8,
+        "firstRoot": "sha256:6140561f138ada6c5f6b17f45c241d62db61ba801263381dafaeb6bbf70628d2",
+        "secondRoot": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "consistencyPath": [
+          "sha256:a4de7c9275f1eb98169c061b3a6cd07af34e5cc10d2e95da51fa3e5e4b18b9d4",
+          "sha256:e2e2f7a4cf106e8c05342cc2b8e4c8f335d3028e6c5fcea7752002fc4df5a522",
+          "sha256:4ccf6b09a9874b3858c14579a1ab487da8686da46a821eb31a5ade1c4e96a5c1",
+          "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33"
+        ],
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "consistency-tampered-path",
+        "description": "First consistency node corrupted. MUST fail.",
+        "first": 3,
+        "second": 8,
+        "firstRoot": "sha256:904c1b3d20221f230b5893fad804e01699d1a8e1e332608a0a4cc8634002088a",
+        "secondRoot": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "consistencyPath": [
+          "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+          "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "expect": {
+          "valid": false
+        }
+      },
+      {
+        "name": "consistency-rewritten-history",
+        "description": "Old root replaced by a different tree's root (history rewrite). MUST fail.",
+        "first": 3,
+        "second": 8,
+        "firstRoot": "sha256:c24550839f534e110e64fa6598fc71ffded9ce441773caba6ae598820122ce33",
+        "secondRoot": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47",
+        "consistencyPath": [
+          "sha256:b3b719b510f11b9b1580c66b3031cec10da1ad00af8466ba78fa0c39276c8eef",
+          "sha256:d491ec31bf0def8b6ce430a86a2a32d971af12fe92aef49487dad4695453bc7c",
+          "sha256:1ed806b8f784dd965239abf7206246c19e403386789eb21fcff0c9afb9e458b1",
+          "sha256:458068cafbb5e01d6d3ac5ca1a461529cc39235ef3595fdced10ae34fc3f5986"
+        ],
+        "expect": {
+          "valid": false
+        }
+      }
+    ],
+    "sth": [
+      {
+        "name": "sth-valid",
+        "description": "Well-formed STH over the size-8 tree. MUST verify.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 8,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "verifyOptions": {
+          "trustedKeys": [
+            "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+          ],
+          "expectedLogId": "https://www.jiaozi.io/api/tlog"
+        },
+        "expect": {
+          "valid": true
+        }
+      },
+      {
+        "name": "sth-tampered-tree-size",
+        "description": "treeSize bumped after signing. MUST fail: bad_signature.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 9,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "expect": {
+          "valid": false,
+          "reason": "bad_signature"
+        }
+      },
+      {
+        "name": "sth-tampered-root",
+        "description": "rootHash replaced after signing. MUST fail: bad_signature.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 8,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:7777777777777777777777777777777777777777777777777777777777777777"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "expect": {
+          "valid": false,
+          "reason": "bad_signature"
+        }
+      },
+      {
+        "name": "sth-untrusted-key",
+        "description": "RP pins a different log key. MUST fail: untrusted_key.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 8,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "verifyOptions": {
+          "trustedKeys": [
+            "zSOME-OTHER-KEY"
+          ]
+        },
+        "expect": {
+          "valid": false,
+          "reason": "untrusted_key"
+        }
+      },
+      {
+        "name": "sth-tree-size-regression",
+        "description": "RP has already accepted treeSize 9. MUST fail: tree_size_regression.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 8,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "verifyOptions": {
+          "minTreeSize": 9
+        },
+        "expect": {
+          "valid": false,
+          "reason": "tree_size_regression"
+        }
+      },
+      {
+        "name": "sth-log-id-mismatch",
+        "description": "RP expects a different logId. MUST fail: log_id_mismatch.",
+        "sth": {
+          "payload": {
+            "schema": "jiaozi.tlog-sth.v1",
+            "logId": "https://www.jiaozi.io/api/tlog",
+            "treeSize": 8,
+            "timestamp": "2026-08-08T00:01:00.000Z",
+            "rootHash": "sha256:690c34d39e3907a77fa01f90288e6616e6600c3c82616370c23aff3f1c672f47"
+          },
+          "signature": "_cDbYG2HxkVBsMa3VTvw0nwT0c5vkIjZZ-CjLRnYpI474aE5u6cbJHhwz3_-Z7gyaSl6Xw5vHLQ8z-5MYwaLBQ",
+          "publicKeyMultibase": "zGX9rI-FshTLGq8g4-s1ep4m-DHaykgM0A5v6iz02jWE"
+        },
+        "verifyOptions": {
+          "expectedLogId": "https://evil.example/api/tlog"
+        },
+        "expect": {
+          "valid": false,
+          "reason": "log_id_mismatch"
+        }
+      }
+    ]
+  }
+}

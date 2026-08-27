@@ -1,0 +1,54 @@
+{
+  "name": "@jiaozi-protocol/tlog-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "jiaozi.tlog.v1 core library — credential lifecycle transparency log (RFC 9162 CT v2 / RFC 9943 SCITT aligned Merkle tree, inclusion & consistency proofs, Ed25519 signed tree heads). Implements standards/tlog-v1/DESIGN.md (public review until 2026-08-18; API may adjust).",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaozi-protocol/jiaozi-app.git",
+    "directory": "packages/tlog-core"
+  },
+  "homepage": "https://www.jiaozi.io",
+  "keywords": [
+    "transparency-log",
+    "certificate-transparency",
+    "merkle-tree",
+    "scitt",
+    "ed25519",
+    "jiaozi-protocol"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test src/entry.test.ts src/merkle.test.ts src/sth.test.ts src/log.test.ts && node vectors/conformance.mjs",
+    "test:unit": "node --import tsx --test src/entry.test.ts src/merkle.test.ts src/sth.test.ts src/log.test.ts",
+    "test:vectors": "node vectors/conformance.mjs",
+    "vectors:generate": "node --import tsx vectors/generate-vectors.mjs",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@jiaozi-protocol/gdid-core": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

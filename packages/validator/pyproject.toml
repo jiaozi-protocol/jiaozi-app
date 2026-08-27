@@ -1,0 +1,37 @@
+[project]
+name = "jiaozi-validator"
+version = "0.3.2"
+description = "Local AI-agent health check CLI - produces a jiaozi.attest.v1 summary and submits it for JIAOZI credential issuance"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Jiaozi Protocol contributors" }]
+keywords = ["ai-agent", "identity", "attestation", "did", "jiaozi-protocol"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+  "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://www.jiaozi.io/integrate"
+Documentation = "https://www.jiaozi.io/docs"
+Source = "https://github.com/jiaozi-protocol/jiaozi-app"
+
+[project.scripts]
+jiaozi-validator = "jiaozi_validator.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

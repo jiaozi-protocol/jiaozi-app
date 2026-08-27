@@ -1,0 +1,42 @@
+# The referee: runs the conformance tester
+#  - on every PR (so registry additions are auto-judged)
+#  - daily against every listed implementation (so the registry stays honest)
+name: conformance
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  vectors:
+    name: offline test vectors
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node conformance.mjs
+
+  live:
+    name: live implementations
+    runs-on: ubuntu-latest
+    needs: vectors
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: run conformance against every registry entry
+        run: |
+          set -euo pipefail
+          count=$(node -e "console.log(JSON.parse(require('fs').readFileSync('implementations.json','utf8')).implementations.length)")
+          for i in $(seq 0 $((count - 1))); do
+            base=$(node -e "console.log(JSON.parse(require('fs').readFileSync('implementations.json','utf8')).implementations[$i].baseUrl)")
+            cert=$(node -e "console.log(JSON.parse(require('fs').readFileSync('implementations.json','utf8')).implementations[$i].certId)")
+            echo "=== $base ==="
+            node conformance.mjs "$base" "$cert"
+          done

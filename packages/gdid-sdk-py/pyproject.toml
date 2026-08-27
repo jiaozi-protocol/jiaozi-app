@@ -1,0 +1,36 @@
+[project]
+name = "jiaozi-gdid"
+version = "0.3.0"
+description = "JIAOZI Protocol Python SDK - register / attest / resolve / verify AI-agent verifiable credentials"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Jiaozi Protocol contributors" }]
+keywords = ["ai-agent", "identity", "verifiable-credentials", "did", "jiaozi-protocol"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "httpx>=0.27.0",
+  "cryptography>=42.0",
+]
+
+[project.urls]
+Homepage = "https://www.jiaozi.io/integrate"
+Documentation = "https://www.jiaozi.io/docs"
+Source = "https://github.com/jiaozi-protocol/jiaozi-app"
+
+[project.optional-dependencies]
+# fastapi / flask are NOT hard dependencies — integrations import them at runtime
+dev = ["pytest>=8.0", "fastapi>=0.110", "flask>=3.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

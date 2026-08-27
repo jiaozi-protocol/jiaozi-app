@@ -1,0 +1,14 @@
+{
+  "$comment": "Verified implementations of jiaozi.status.v1. To be listed, add your deployment via PR — CI runs the conformance tester against it; all checks must pass. Entries failing the daily re-run for 7 consecutive days are removed.",
+  "implementations": [
+    {
+      "name": "Jiaozi Protocol — SG Core (reference deployment)",
+      "baseUrl": "https://www.jiaozi.io",
+      "certId": "JP-2026-000016",
+      "role": "issuer",
+      "implementation": "gdid-core (TypeScript)",
+      "contact": "hello@jiaozi.io",
+      "listedAt": "2026-08-08"
+    }
+  ]
+}

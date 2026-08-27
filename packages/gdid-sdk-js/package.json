@@ -1,0 +1,56 @@
+{
+  "name": "@jiaozi-protocol/sdk",
+  "version": "0.3.0",
+  "description": "JIAOZI Protocol TypeScript SDK — register / attest / resolve / verify AI-agent verifiable credentials",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaozi-protocol/jiaozi-app.git",
+    "directory": "packages/gdid-sdk-js"
+  },
+  "homepage": "https://www.jiaozi.io/integrate",
+  "keywords": [
+    "ai-agent",
+    "identity",
+    "attestation",
+    "did",
+    "verifiable-credentials",
+    "jiaozi-protocol"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "node --import tsx --test src/index.test.ts src/require-trust.test.ts src/multi-anchor.test.ts",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@jiaozi-protocol/gdid-core": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
